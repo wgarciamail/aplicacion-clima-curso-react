@@ -20,13 +20,13 @@ Este es un tutorial paso a paso para crear un buscador de películas utilizando 
 -   Ejecuta el siguiente comando para crear un nuevo proyecto de React utilizando Vite:
 
 ```
-    npx create-vite@latest buscador-peliculas-react --template react
+    npx create-vite@latest aplicacion-clima-react --template react
 ```
 
 -   Ingresa a la carpeta del proyecto:
 
 ```
-    cd buscador-peliculas-react
+    cd aplicacion-clima-react
 ```
 
 ### 2. Obtención de la API key
@@ -35,15 +35,15 @@ Este es un tutorial paso a paso para crear un buscador de películas utilizando 
 -   Obtén una API key accediendo a tu perfil o a la sección de configuración de la cuenta.
 -   Copia tu API key, la necesitarás más adelante.
 
-### 3. Implementación del componente BuscadorPeliculas
+### 3. Implementación del componente WheatherApp
 
--   Crea un nuevo archivo llamado `BuscadorPeliculas.jsx` en la carpeta `src` del proyecto.
--   Copia y pega el siguiente código en el archivo `BuscadorPeliculas.jsx`:
+-   Crea un nuevo archivo llamado `WheatherApp.jsx` en la carpeta `src` del proyecto.
+-   Copia y pega el siguiente código en el archivo `WheatherApp.jsx`:
 
 
 ```
 import { useState } from "react";
-    export const BuscadorPeliculas = () => {
+    export const WheatherApp = () => {
       const urlBase = 'https://api.openweathermap.org/data/2.5/weather';
       const API_KEY = 'your_api_key';
       const difKelvin = 273.15;
@@ -99,19 +99,19 @@ import { useState } from "react";
 ```
 
 
-### 4. Uso del componente BuscadorPeliculas
+### 4. Uso del componente WheatherApp
 
--   Abre el archivo `src/App.jsx`.
+-   Abre el archivo `src/WheatherApp.jsx`.
 -   Reemplaza el contenido existente con el siguiente código:
 
 ```
 import React from "react";
-import { BuscadorPeliculas } from "./BuscadorPeliculas";
+import { WheatherApp } from "./WheatherApp";
 
     function App() {
       return (
         <div className="App">
-          <BuscadorPeliculas />
+          <WheatherApp />
         </div>
       );
     }
@@ -119,7 +119,7 @@ import { BuscadorPeliculas } from "./BuscadorPeliculas";
 
 ### 5. Configuración de la API key
 
--   Abre el archivo `src/BuscadorPeliculas.jsx`.
+-   Abre el archivo `src/WheatherApp.jsx`.
 -   Reemplaza `'your_api_key'` en la línea `const API_KEY = 'your_api_key';` con tu API key obtenida de OpenWeatherMap.
 
 ## Recursos adicionales
@@ -127,4 +127,3 @@ import { BuscadorPeliculas } from "./BuscadorPeliculas";
 -   [Documentación de React](https://reactjs.org/docs/getting-started.html)
 -   [Documentación de Vite](https://vitejs.dev/guide/)
 -   [Documentación de la API de OpenWeatherMap](https://openweathermap.org/api)
--   [Repositorio de ejemplo completo en GitHub](https://github.com/tu-usuario/buscador-peliculas-react)
